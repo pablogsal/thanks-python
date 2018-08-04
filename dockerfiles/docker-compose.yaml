@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DB=thanks_python
+  redis:
+    image: redis
+  web:
+    build: .
+    command: ./django_entrypoint.sh
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db/thanks_python
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - REDIS_URL=redis://redis/
+
+    volumes:
+      - .:/var/www/thanks_python
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+  worker:
+    build: .
+    command: celery --app=thanks_python worker --beat --loglevel=debug
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db/thanks_python
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - REDIS_URL=redis://redis/
+    volumes:
+      - .:/var/www/thanks_python
+    depends_on:
+      - db
+      - redis
+      - web
+
+

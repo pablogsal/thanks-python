@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+dj-database-url = "*"
+celery = "*"
+redis = "*"
+django-heroku = "*"
+gitpython = "*"
+pylint = "*"
+isort = "*"
+pylint-django = "*"
+mypy = "*"
+django-filter = "*"
+"django-tables2" = "*"
+gunicorn = "*"
+"psycopg2-binary" = "*"
+whitenoise = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
