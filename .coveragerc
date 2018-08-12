@@ -1,0 +1,5 @@
+[run]
+include = thanks_python/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin

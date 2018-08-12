@@ -1,2 +1,2 @@
-web: gunicorn thanks_python.wsgi
-worker: celery --app=thanks_python worker --beat --loglevel=debug
+web: gunicorn config.wsgi:application
+worker: celery worker --app=thanks_python.taskapp --loglevel=debug --beat

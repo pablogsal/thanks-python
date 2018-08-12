@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div style="width:40%; margin:0 auto;">
+    <h6 class="center"> Python is a community project and is very thankful for the many community contributions it
+        receives.</h6>
+    <h4 class="center">Summary</h4>
+    <div class="collection">
+        <a href="/all_time" class="center collection-item" style="font-size:160%;">All time contributors</a>
+        <a href="/since/0" class="center collection-item" style="font-size:160%;">Today contributions</a>
+        <a href="/since/7" class="center collection-item" style="font-size:160%;">This week contributions</a>
+        <a href="/since/31" class="center collection-item" style="font-size:160%;">This month contributions</a>
+    </div>
+    <h4 class="center">Releases</h4>
+    <div class="collection">
+        {% for tag in tags %}
+            <a href="/tag/{{ tag }}" class="center collection-item" style="font-size:160%;">{{ tag }}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock main_content %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+  CPython all-time contributors
+{% endblock title %}
+
+{% block main_content %}
+  <div style="width:40%; margin:0 auto;">
+    <div class="row">
+      <table class="striped">
+        <thead>
+        <tr>
+          <th>Author</th>
+          <th>Commits</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for contributor in contributors %}
+          <tr>
+            <th><a href={% url 'contributor_commits' contributor.id %}>{{ contributor.username }}</a></th>
+            <th>{{ contributor.number_of_commits }}</th>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock main_content %}

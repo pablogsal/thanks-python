@@ -1,0 +1,15 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=kAYfElzXmDzKkjjfqUxmbivIlmwqIehj
+CELERY_FLOWER_PASSWORD=uHZjCpJk2EFDboqEi2VJ1gFP0bbRFGjliPg1odlMN0X7pe6HR2jzcNTOCZZ0dJF4
+

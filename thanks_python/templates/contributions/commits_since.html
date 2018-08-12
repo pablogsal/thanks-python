@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Commits since {{ from_date }}
+{% endblock title %}
+
+{% block main_content %}
+  {% load render_table from django_tables2 %}
+  <div class="row">
+    {% render_table table 'contributions/table_default.html' %}
+  </div>
+{% endblock main_content %}
