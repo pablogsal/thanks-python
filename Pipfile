@@ -27,7 +27,7 @@ django-anymail = {extras = ["mailgun"], version = "==3.0"}
 Pillow = "==5.2.0"
 "argon2_cffi" = "==18.1.0"
 GitPython = "*"
-Django = "==2.0.12"
+Django = "==2.2.18"
 
 [dev-packages]
 
