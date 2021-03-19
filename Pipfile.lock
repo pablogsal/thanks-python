@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1460555c5c7b57640a8a7f8f0c27f1bbd972d12367efdc687dc3a73e02d37d8f"
+            "sha256": "f94d9e18650e08c78618d2000779fd2d991e0438a19aea81902b37cf9ae15ba4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -251,11 +251,11 @@
         },
         "djangorestframework": {
             "hashes": [
-                "sha256:b6714c3e4b0f8d524f193c91ecf5f5450092c2145439ac2769711f7eba89a9d9",
-                "sha256:c375e4f95a3a64fccac412e36fb42ba36881e52313ec021ef410b40f67cddca4"
+                "sha256:5cc724dc4b076463497837269107e1995b1fbc917468d1b92d188fd1af9ea789",
+                "sha256:a5967b68a04e0d97d10f4df228e30f5a2d82ba63b9d03e1759f84993b7bf1b53"
             ],
             "index": "pypi",
-            "version": "==3.8.2"
+            "version": "==3.11.2"
         },
         "enum34": {
             "hashes": [
@@ -329,7 +329,6 @@
                 "sha256:03e47ad063331dd6a3f04a43eddca8a966a26ba0c5b7207a9a9e4e08f1b29419",
                 "sha256:a6d58433de0ae800347cab1fa3043cebbabe8baa9d29e668f1c768cb87a333c6"
             ],
-            "index": "pypi",
             "version": "==2.11.3"
         },
         "jmespath": {
